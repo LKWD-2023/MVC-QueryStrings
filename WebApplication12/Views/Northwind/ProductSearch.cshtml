@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ProductSearch</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container mt-5"> 
+        <form action="/northwind/productsearchresults">
+            <div class="row">
+                <div class="col-md-10">
+                    <input class="form-control form-control-lg" name="searchtext" placeholder="Search Products..." />
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-success btn-block">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

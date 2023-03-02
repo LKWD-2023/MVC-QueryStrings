@@ -1,0 +1,42 @@
+﻿@using WebApplication12.Models
+@model CategoriesPageViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Orders</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container mt-5">
+        <table class="table table-hover table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Category c in Model.Categories)
+                {
+                    <tr>
+                        <td>@c.Id</td>
+                        <td>
+                            <a href="/northwind/products?categoryid=@c.Id">
+                                @c.Name
+                            </a>
+                        </td>
+                        <td>@c.Description</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
